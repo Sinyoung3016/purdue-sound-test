@@ -19,7 +19,7 @@ export default App => {
     }
   }
 
-  function printSound() {
+  function playSound() {
     try {
       SoundPlayer.playSoundFile('wakeup', 'mp3');
     } catch (e) {
@@ -40,8 +40,22 @@ export default App => {
           alignItems: 'center',
           justifyContent: 'center',
         }}
-        onPress={printSound}>
+        onPress={soundLevel}>
         <Text style={{fontSize: 20}}>SoundLevel</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#9dbad1',
+          borderRadius: 40,
+          marginTop: 200,
+          marginLeft: 50,
+          width: 300,
+          height: 100,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        onPress={playSound}>
+        <Text style={{fontSize: 20}}>PlaySound</Text>
       </TouchableOpacity>
     </View>
   );
